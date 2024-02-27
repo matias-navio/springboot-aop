@@ -23,5 +23,12 @@ public class GreetingController {
         String greeting = gService.sayHello("Matias Navio", "Hola que tal");
         return ResponseEntity.ok(Collections.singletonMap("greeting", greeting));
     }
+
+    @GetMapping("/error")
+    public ResponseEntity<?> greetingError(){
+    
+        String greeting = gService.sayHelloError("Matias Navio", "Hola que tal");
+        return ResponseEntity.ok(Collections.singletonMap("greeting", greeting));
+    }
  
 }
